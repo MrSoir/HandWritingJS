@@ -1,0 +1,13 @@
+
+#alinesCanvas {
+	width: 100vw;
+	height: 100vh;	
+}
+
+
+#testDiv{
+	width: 100vw;
+	height: 300px;
+	background-color: #ff00ff;
+	color: blue;
+}

@@ -1,0 +1,37 @@
+import React, { Component } from 'react';
+import './App.css';
+
+class App extends Component {
+	render() {
+		return (
+		    <div className="App">
+		      <LineDrawer/>
+		    </div>
+		);
+	}
+}
+class LineDrawer extends Component{
+	constructor(args){
+		super(args);
+	}
+	componentDidMount(){ 
+	   this.alines  = new AntialiasedLines('alinesCanvas');
+	   var alinesMeta = {
+	   	linePoints: [[10,10], [400,400], [500,300]],
+	   };
+	   this.alines.startAnimation(alinesMeta);
+	}
+	render()
+	{
+		return (
+			<div id="canvasDiv">
+				<canvas id="alinesCanvas"
+						  width="640"
+						  height="480"
+				/>
+			</div>
+		);
+	}
+}
+
+export default App;
